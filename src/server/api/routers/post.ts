@@ -153,6 +153,20 @@ export const postRouter = createTRPCRouter({
       })
     )
     .query(async ({ ctx, input }) => {
+      const userPosts = await ctx.db.userPost.findMany({
+        where: {
+          createdById: input.id,
+        },
+      });
+      await Promise.all(
+        userPosts.map((post) =>
+          ctx.db.userPost.delete({
+            where: {
+              id: post.id,
+            },
+          })
+        )
+      );
       await ctx.db.user.delete({
         where: {
           id: input.id,
