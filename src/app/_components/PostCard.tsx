@@ -21,7 +21,7 @@ const PostCard = (props: Props) => {
       key={props.id}
       style={{
         background: "#cccccc80",
-
+        aspectRatio: 1,
         borderRadius: 12,
       }}
     >
@@ -80,8 +80,18 @@ const PostCard = (props: Props) => {
           height: "100%",
         }}
       />
-      <div>{props.title}</div>
-      <div>{props.price} $</div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          paddingLeft: 8,
+          paddingRight: 8,
+          paddingBottom: 4,
+        }}
+      >
+        <div>{props.title}</div>
+        <div>{props.price} </div>
+      </div>
     </Link>
   );
 };

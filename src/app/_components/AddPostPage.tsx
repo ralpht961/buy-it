@@ -137,6 +137,9 @@ const AddpostPage = () => {
           />
           <div>Upload image</div>
           <UploadButton
+            onUploadBegin={() => {
+              setIsLoading(true);
+            }}
             endpoint="imageUploader"
             onClientUploadComplete={(res) => {
               const firstres = res[0];
@@ -148,6 +151,7 @@ const AddpostPage = () => {
                   };
                 });
               }
+              setIsLoading(false);
             }}
           />
           {message != null && (

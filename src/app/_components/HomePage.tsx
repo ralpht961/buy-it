@@ -35,13 +35,7 @@ const HomePage = (props: Props) => {
       >
         Items for sale
       </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-          gap: 16,
-        }}
-      >
+      <div className="postcard-wrapper">
         {props.allPosts.map((post) => {
           return (
             <PostCard

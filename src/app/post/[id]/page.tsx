@@ -42,7 +42,7 @@ const Post = async (props: {
           }}
         />
       </div>
-      <div>price :{postData.price} $</div>
+      <div>price :{postData.price} </div>
       <div>{postData.description}</div>
       <div>contact : {postData.createdBy.email}</div>
     </div>
