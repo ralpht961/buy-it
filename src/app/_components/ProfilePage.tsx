@@ -42,12 +42,13 @@ const ProfilePage = (props: Props) => {
           gap: 12,
           marginTop: 12,
         }}
+        className="profile-edit-wrapper"
       >
         <div
           style={{
-            display: "flex",
             alignItems: "center",
             gap: 16,
+            display: "flex",
           }}
         >
           <Image
@@ -86,10 +87,8 @@ const ProfilePage = (props: Props) => {
         </div>
       </div>
       <div
+        className="postcard-wrapper"
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-          gap: 16,
           marginTop: 12,
         }}
       >

@@ -30,36 +30,49 @@ body a {
 .form-wrapper {
   width: 100%;
 }
-.postcard-wrapper{
-  display:grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 16,
+.postcard-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
-@media only screen and (max-width: 600px) {
-  .imgs {
+.profile-edit-wrapper{
+  display: flex;
+  }
+  .admin-buttons{
+    display: flex;
+
+  }
+  @media only screen and (max-width: 600px) {
+    .imgs {
     max-width: 100%;
   }
   .login-wrapper {
     flex-direction: column;
-  }
-  .container {
-    margin-left: 10px;
+    }
+    .container {
+      margin-left: 10px;
     margin-right: 10px;
-  }
+    }
   .container2 {
     margin-left: 10px;
     margin-right: 10px;
-  }
-  .form-wrapper {
+    }
+    .form-wrapper {
     width: 100%;
-  }
-  .postcard-wrapper{
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .imgs2 {
-    flex-wrap: wrap;
-  }
-}
+    }
+    .postcard-wrapper {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .profile-edit-wrapper{
+        flex-direction: column;
+      }
+      .admin-buttons{
+        flex-direction: column;
+      }
+      }
+      
+      @media only screen and (max-width: 1024px) {
+        .imgs2 {
+          flex-wrap: wrap;
+          }
+          }

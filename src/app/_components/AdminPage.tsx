@@ -62,8 +62,8 @@ const AdminPage = (props: Props) => {
                 <div>{user.email}</div>
               </div>
               <div
+                className="admin-buttons"
                 style={{
-                  display: "flex",
                   gap: 12,
                 }}
               >
